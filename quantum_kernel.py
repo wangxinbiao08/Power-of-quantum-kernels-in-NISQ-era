@@ -1,11 +1,9 @@
 import numpy as np
 import cvxopt.solvers
-import matplotlib.pyplot as plt
 import data_encoding_sample as de
 from data_encoding_sample import DataEncoding
 from scipy.linalg import sqrtm
 import pd_appox as pd
-import cvxopt.solvers
 import argparse
 
 parser = argparse.ArgumentParser()
@@ -76,8 +74,6 @@ class SVM():
         K = np.zeros([X.shape[0], X.shape[0]])
         for i in range(X.shape[0]):
             for j in range(i, X.shape[0]):
-                phi_x = de.phi_calcu(X[i, :])
-                phi_z = de.phi_calcu(X[j, :])
                 if self.kernel == 'qk':
                     K[i, j] = qk_matrix[i, j]  # self.qk(X[i, :], X[j, :], phi_x, phi_z)
                 else:
