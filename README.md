@@ -1,2 +1,2 @@
-# Quantum-Kernel-for-Power-of-Data
+# Power of quantum kernels in NISQ era
 As we get an interseting theory result which the number of training set has a negative effect to the generalization error in terms of the entry in quantum kernel matrix, we need to conduct experiments to verify the theory.  Given different hyperparameters, including the number of training data, shots (num_test=100), we verify the experiment results of noiseless model and noise model(depolarizing error, 0.3) through the testing accuracy and training accuracy. 
