@@ -23,7 +23,7 @@ def my_quantum_function(x, z, phix, phiz):
     for i in range(nqubit):
         qml.Hadamard(wires=i)
     for i in range(nqubit):
-        qml.RZ(x[i].val, wires=i)
+        qml.RZ(x[i], wires=i)
     for i in range(nqubit - 1):
         qml.CNOT(wires=[i, i + 1])
         qml.RZ(phix[i][i + 1], wires=i + 1)
@@ -31,7 +31,7 @@ def my_quantum_function(x, z, phix, phiz):
     for i in range(nqubit):
         qml.Hadamard(wires=i)
     for i in range(nqubit):
-        qml.RZ(x[i].val, wires=i)
+        qml.RZ(x[i], wires=i)
     for i in range(nqubit - 1):
         qml.CNOT(wires=[i, i + 1])
         qml.RZ(phix[i][i + 1], wires=i + 1)
@@ -41,7 +41,7 @@ def my_quantum_function(x, z, phix, phiz):
         qml.RZ(-phiz[i][i + 1], wires=i + 1)
         qml.CNOT(wires=[i, i + 1])
     for i in range(nqubit):
-        qml.RZ(-z[i].val, wires=i)
+        qml.RZ(-z[i], wires=i)
     for i in range(nqubit):
         qml.Hadamard(wires=i)
     for i in range(nqubit - 1):
@@ -49,7 +49,7 @@ def my_quantum_function(x, z, phix, phiz):
         qml.RZ(-phiz[i][i + 1], wires=i + 1)
         qml.CNOT(wires=[i, i + 1])
     for i in range(nqubit):
-        qml.RZ(-z[i].val, wires=i)
+        qml.RZ(-z[i], wires=i)
     for i in range(nqubit):
         qml.Hadamard(wires=i)
 
